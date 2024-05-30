@@ -12,7 +12,7 @@
 </head>
 <body>
     <h3>Job 05</h3>
-    <p>Développez le fameux jeu du morpion...</p>
+    <p>Amusons-nous...</p>
     
     <?php
     session_start();
