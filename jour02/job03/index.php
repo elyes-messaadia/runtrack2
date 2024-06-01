@@ -1,13 +1,14 @@
 <?php
-for ($i = 0; $i <= 100; $i++) {
-    if ($i == 42) {
+for ($laPlateforme = 0; $laPlateforme <= 100; $laPlateforme++) {
+    if ($laPlateforme == 42) {
         echo "La Plateforme_<br />";
-    } elseif ($i >= 0 && $i <= 20) {
-        echo "<i>$i</i><br />";
-    } elseif ($i >= 25 && $i <= 50) {
-        echo "<u>$i</u><br />";
+    } elseif ($laPlateforme >= 0 && $laPlateforme <= 20) {
+        echo "<i>$laPlateforme</i><br />";
+    } elseif ($laPlateforme >= 25 && $laPlateforme <= 50) {
+        echo "<u>$laPlateforme</u><br />";
     } else {
-        echo "$i<br />";
+        echo "$laPlateforme<br />";
+    // Je ne sais pas vraiment quoi mettre comme commentaire donc voilà
     }
 }
 ?>

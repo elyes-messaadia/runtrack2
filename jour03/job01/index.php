@@ -19,6 +19,20 @@ foreach ($numbers as $number) {
     }
 }
 ?>
+<!-- Deuxième méthode -->
+<?php
+// // Création du tableau contenant les nombres spécifiés
+// $nombres = [200, 204, 173, 98, 171, 404, 459];
+
+// // Parcourir le tableau et vérifier si chaque nombre est pair ou impair
+// foreach ($nombres as $nombre) {
+//     if ($nombre % 2 == 0) {
+//         echo "$nombre est pair<br />";
+//     } else {
+//         echo "$nombre est impair<br />";
+//     }
+// }
+?>
 
 </body>
 </html>

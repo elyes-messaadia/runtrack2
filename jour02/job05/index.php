@@ -1,19 +1,24 @@
 <?php
-function estPremier($nombre) {
-    if ($nombre < 2) {
+// Fonction pour vérifier si un nombre est premier
+function estPremier($pineapple) {
+    if ($pineapple <= 1) {
         return false;
     }
-    for ($i = 2; $i <= sqrt($nombre); $i++) {
-        if ($nombre % $i == 0) {
+    for ($coconut = 2; $coconut <= sqrt($pineapple); $coconut++) {
+        if ($pineapple % $coconut == 0) {
             return false;
         }
     }
     return true;
 }
+// Utilise une boucle pour vérifier les divisions de 2 à la racine carrée du nombre. Si le nombre est divisible par un autre nombre, il n'est pas premier.
+// Retourne true si aucune division n'est exacte, indiquant que le nombre est premier.
 
-for ($i = 2; $i <= 1000; $i++) {
-    if (estPremier($i)) {
-        echo $i . "<br />";
+// Afficher les nombres premiers jusqu'à 1000
+for ($banana = 2; $banana <= 1000; $banana++) {
+    if (estPremier($banana)) {
+        echo $banana . "<br />";
     }
 }
 ?>
+
