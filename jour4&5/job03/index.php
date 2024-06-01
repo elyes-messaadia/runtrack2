@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Formulaire POST et Affichage</title>
+    <title>GET Form</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-        <label for="prenom">Prénom:</label>
+    <form method="GET" action="display_get.php">
+        <label for="prenom">Prenom:</label>
         <input type="text" id="prenom" name="prenom"><br><br>
+        
         <label for="nom">Nom:</label>
         <input type="text" id="nom" name="nom"><br><br>
-        <label for="age">Âge:</label>
-        <input type="text" id="age" name="age"><br><br>
-        <input type="submit" value="Envoyer">
+        
+        <input type="submit" value="Submit">
     </form>
-
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $nombre_arguments = count($_POST);
-        echo "<p>Le nombre d'arguments POST envoyé est : $nombre_arguments</p>";
+echo "<table border='1'>
+<tr>
+<th>Argument</th>
+<th>Valeur</th>
+</tr>";
+
+foreach ($_GET as $key => $value) {
+    if (isset($_GET[$key])) {
+        echo "<tr>
+        <td>" . htmlspecialchars($key) . "</td>
+        <td>" . htmlspecialchars($value) . "</td>
+        </tr>";
     }
-    ?>
+}
+
+echo "</table>";
+?>
+
 </body>
 </html>

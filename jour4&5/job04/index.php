@@ -36,7 +36,7 @@
     </form>
 
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['prenom']) || isset($_POST['nom'])) {
         echo "<h2>Tableau des arguments POST</h2>";
         echo "<table>";
         echo "<tr><th>Argument</th><th>Valeur</th></tr>";
@@ -48,3 +48,4 @@
     ?>
 </body>
 </html>
+

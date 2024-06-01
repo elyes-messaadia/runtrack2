@@ -6,8 +6,6 @@
     <title>Job 03</title>
 </head>
 <body>
-    <h3>Job 03</h3>
-    <p>Créez un formulaire qui contient un input de type de text nommé “prenom” et un bouton submit. Lorsque l’on valide le formulaire, le prénom est ajouté dans une variable de session. Afficher l’ensemble des prénoms. Ajoutez un bouton nommé “reset” qui permet de réinitialiser la liste.</p>
     <form method="post" action="index.php">
         <input type="text" name="prenom" placeholder="Entrez le prénom">
         <button type="submit" name="submit">Envoyer</button>
