@@ -1,48 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Compter les voyelles et les consonnes</title>
-</head>
-<body>
-
 <?php
-// Définition de la chaîne de caractères
-$str = "On n’est pas le meilleur quand on le croit mais quand on le sait";
+// Création de la chaîne de caractères
+$str = "On nest pas le meilleur quand on le croit mais quand on le sait";
 
-// Initialisation du dictionnaire
-$dic = array("consonnes" => 0, "voyelles" => 0);
+// Initialiser le dictionnaire pour stocker le nombre de voyelles et de consonnes
+$dic = ["consonnes" => 0, "voyelles" => 0];
 
-// Définition des voyelles
-$voyelles = "aeiouyAEIOUY";
+// Définir les voyelles
+$voyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
 
-// Parcourir la chaîne de caractères
-for ($i = 0; $i < strlen($str); $i++) {
-    $char = $str[$i];
-    if (ctype_alpha($char)) { // Vérifier si le caractère est une lettre
-        if (strpos($voyelles, $char) !== false) {
+// Parcourir la chaîne et compter les voyelles et consonnes
+for ($andy = 0; $andy < strlen($str); $andy++) {
+    $char = $str[$andy];
+    if (ctype_alpha($char)) { // Vérifie si le caractère est une lettre
+        if (in_array($char, $voyelles)) {
             $dic["voyelles"]++;
         } else {
             $dic["consonnes"]++;
         }
     }
 }
+
+// Afficher les résultats dans un tableau HTML
+echo "<table border='1'>";
+echo "<thead>";
+echo "<tr><th>Voyelles</th><th>Consonnes</th></tr>";
+echo "</thead>";
+echo "<tbody>";
+echo "<tr><td>" . $dic["voyelles"] . "</td><td>" . $dic["consonnes"] . "</td></tr>";
+echo "</tbody>";
+echo "</table>";
 ?>
 
-<!-- Affichage des résultats dans un tableau HTML -->
-<table border="1">
-    <thead>
-        <tr>
-            <th>Voyelles</th>
-            <th>Consonnes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><?php echo $dic["voyelles"]; ?></td>
-            <td><?php echo $dic["consonnes"]; ?></td>
-        </tr>
-    </tbody>
-</table>
-
-</body>
-</html>

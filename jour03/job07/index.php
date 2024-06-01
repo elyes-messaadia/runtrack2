@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Remplacer les caractères d'une chaîne</title>
-</head>
-<body>
-
 <?php
-// Définition de la chaîne de caractères
-$str = "Certaines choses changent, et d'autres ne changeront jamais.";
+// Création de la chaîne de caractères
+$matrix = "Certaines choses changent, et d'autres ne changeront jamais.";
 
-// Initialisation de la variable pour stocker le résultat
-$result = "";
+// Initialiser une variable pour stocker la nouvelle chaîne
+$newMatrix = "";
 
-// Obtenir la longueur de la chaîne
-$length = strlen($str);
+// Longueur de la chaîne
+$len = strlen($matrix);
 
-// Parcourir la chaîne de caractères
-for ($i = 1; $i < $length; $i++) {
-    // Ajouter le caractère suivant à la variable résultat
-    $result .= $str[$i];
+// Parcourir la chaîne et construire la nouvelle chaîne
+for ($morpheus = 0; $morpheus < $len; $morpheus++) {
+    if ($morpheus == $len - 1) {
+        // Remplacer le dernier caractère par le premier
+        $newMatrix .= $matrix[0];
+    } else {
+        // Remplacer chaque caractère par le suivant
+        $newMatrix .= $matrix[$morpheus + 1];
+    }
 }
 
-// Ajouter le premier caractère à la fin de la chaîne résultante
-$result .= $str[0];
-
-// Afficher le résultat
-echo $result;
+// Afficher la nouvelle chaîne
+echo $newMatrix;
 ?>
-
-</body>
-</html>

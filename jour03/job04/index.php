@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Compter le nombre de caractères</title>
-</head>
-<body>
-
 <?php
-// Définition de la chaîne de caractères
+// Création de la chaîne de caractères
 $str = "Dans l'espace, personne ne vous entend crier";
 
-// Compter le nombre de caractères dans la chaîne
-$nombreDeCaracteres = strlen($str);
+// Initialiser le compteur de caractères
+$compteur = 0;
 
-// Afficher le résultat
-echo "Le nombre de caractères dans la chaîne est : " . $nombreDeCaracteres;
+// Parcourir la chaîne et compter les caractères
+for ($compter = 0; $compter < strlen($str); $compter++) {
+    $compteur++;
+}
+
+// Afficher le nombre total de caractères
+echo "Le nombre de caractères dans la chaîne est : " . $compteur;
 ?>
 
-</body>
-</html>
